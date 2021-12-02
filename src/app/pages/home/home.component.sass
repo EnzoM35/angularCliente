@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Source+Code+Pro:ital,wght@0,600;1,900&display=swap')
+
+body
+  background-image: url("../../../assets/back.jpg")
+  background-size: cover
+    // BARRA FIJA
+    // position: fixed
+    // left: 0
+    // top: 0
+    // width: 100%
+
+.statusMain
+  text-align: center
+
+.buttons
+  button
+    font-family: 'Kanit', sans-serif
+    font-family: 'Source Code Pro', monospace
+    //padding: 1.5em 1.5em
+    margin: .5em
+    border: solid 2px black
+    background-color: #f5f5f5
+    border-radius: 30px
+    //font-size: 20px
+    //text-align: center
+    width: 200px
+    height: 70px
+  button:hover
+    cursor: pointer
+    transition: 0.5s
+    color: black
+    transform: scale(1.05)
+    background-color: white
+
+
+.foot
+  background-color: blue
+  text-align: center
+  font-family: sans-serif
+  color: whitesmoke
+  width: 100%
+  bottom: 0
+  position: fixed
+
+
+
+
+@media (min-width: 950px )
+  .statusMain
+    text-align: left
+    display: flex
+    max-width: 1024px
+    justify-content: space-between
+    margin: 0 auto
+    padding-top: 3em
+  .buttons
+    padding-top: 3em
+    display: inline-block
+
+    button
+      //padding: 3em 3em
+      background-color: rgba(255,255,255,0.5)
+      background-image: url("../../../assets/botones.png")
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center
+      padding-top: 3em
+      padding-bottom: 5em
+      margin: .5em
+      font-size: 15px
+      font-weight: bold
+      -webkit-text-stroke: .3px black
+
+
+

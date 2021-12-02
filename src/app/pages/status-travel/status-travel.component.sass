@@ -1,0 +1,26 @@
+body
+  background-image: url("../../../assets/back.jpg")
+  background-size: cover
+
+.statusMain
+  text-align: center
+
+
+@media (min-width: 950px )
+  .statusMain
+    text-align: left
+    display: flex
+    max-width: 1024px
+    justify-content: space-between
+    margin: 0 auto
+
+  app-table-status
+    padding-top: 3em
+
+@media (max-width: 360px )
+  app-table-status
+    padding-top: 0
+  .statusMain
+    
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="topHeader">
+    <app-header></app-header>
+  </header>
+
+  <section class="statusMain">
+    <app-main-home></app-main-home>
+
+    <div class="buttons">
+      <div class="principal">
+        <button class="btn" [routerLink]="['/requestTravel']" routerLinkActive="router-link-active">Solicitar
+          viaje</button>
+        <button class="btn" [routerLink]="['/statusTravel']" routerLinkActive="router-link-active">Estado de los
+          viajes</button>
+      </div>
+      <div class="secondary">
+        <button class="btn" [routerLink]="['/history']" routerLinkActive="router-link-active">Historial de los
+          viajes</button>
+        <button class="btn" [routerLink]="['/login']" routerLinkActive="router-link-active">Cerrar sesión</button>
+      </div>
+    </div>
+  </section>
+
+  <app-footer></app-footer>
+</body>
+
+</html>

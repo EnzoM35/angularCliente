@@ -1,0 +1,33 @@
+body
+  background-image: url("../../../assets/back.jpg")
+  background-size: cover
+
+    // BARRA FIJA
+    // position: fixed
+    // left: 0
+    // top: 0
+    // width: 100%
+
+.requestTravel
+  text-align: center
+  padding: 2em
+
+
+@media (min-width: 950px )
+  .requestTravel
+    text-align: left
+    display: flex
+    max-width: 980px
+    justify-content: space-between
+    margin: 0 auto
+
+  app-form-request
+    padding-top: 20px
+
+@media (max-height: 360px )
+  app-form-request
+    padding-top: 0
+  .requestTravel
+    padding: none
+
+

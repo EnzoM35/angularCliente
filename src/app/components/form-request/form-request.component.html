@@ -1,0 +1,36 @@
+<mat-card>
+
+  <form #form="ngForm" [formGroup]="reqForm" (ngSubmit)="submit(formDirective)" id="formR" #formDirective=ngForm>
+    <mat-card-title>Solicitá tu viaje</mat-card-title>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Marca</mat-label>
+      <input matInput type="text" placeholder="Ingrese la marca" formControlName="marca" required>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Modelo</mat-label>
+      <input matInput placeholder="Ingrese el modelo" formControlName="modelo" required>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Falla</mat-label>
+      <input matInput placeholder="Describa la falla" formControlName="falla" required>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Dirección</mat-label>
+      <input matInput type="input" value="{{direccion}}" required readonly>
+    </mat-form-field>
+    <br>
+
+
+    <div class="buttonRequest">
+      <button mat-raised-button type="submit" color="primary" [disabled]="!reqForm.valid">Solicitar</button>
+    </div>
+
+  </form>
+</mat-card>
