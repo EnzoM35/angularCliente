@@ -18,6 +18,7 @@ export class TableStatusComponent implements AfterViewInit {
     'estEquipo',
     'estEnvio',
   ];
+
   dataSource: MatTableDataSource<Estado>;
 
   @ViewChild(MatPaginator) paginator: any;
@@ -32,9 +33,6 @@ export class TableStatusComponent implements AfterViewInit {
     this.statusService.status(id).subscribe((resp) => {
       respuesta = JSON.stringify(resp);
       this.envios = JSON.parse(respuesta);
-
-      console.log('Solicitud realizada');
-      console.log(this.envios);
       this.dataSource = new MatTableDataSource<Estado>(this.envios);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
@@ -73,14 +71,5 @@ export class TableStatusComponent implements AfterViewInit {
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
-  }
-
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-
-    if (this.dataSource.paginator) {
-      this.dataSource.paginator.firstPage();
-    }
   }
 }

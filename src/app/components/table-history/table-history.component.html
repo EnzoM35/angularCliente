@@ -1,8 +1,5 @@
 <div class="tabla">
-  <mat-form-field appearance="fill">
-    <mat-label>Filtro</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="P/e: Samsung" #input>
-  </mat-form-field>
+
   <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource" matSort>
       <ng-container matColumnDef="marca">
@@ -34,9 +31,7 @@
       </ng-container>
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-      <tr class="mat-row" *matNoDataRow>
-        <td class="mat-cell" colspan="4">No hay datos que coincidan con "{{input.value}}"</td>
-      </tr>
+
     </table>
 
     <mat-paginator [pageSizeOptions]="[5]" aria-label="Selecciona las páginas"></mat-paginator>

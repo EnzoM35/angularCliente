@@ -4,7 +4,6 @@ import { MaterialModule } from '../material.module';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { HeaderClientsComponent } from './header-clients/header-clients.component';
 import { MainHomeComponent } from './main-home/main-home.component';
 import { MainTravelComponent } from './main-travel/main-travel.component';
 import { MainStatusComponent } from './main-status/main-status.component';
@@ -21,7 +20,7 @@ import { TableHistoryComponent } from './table-history/table-history.component';
 
 @NgModule({
   declarations: [
-    HeaderClientsComponent,
+
     MainHomeComponent,
     MainTravelComponent,
     MainStatusComponent,
@@ -37,7 +36,7 @@ import { TableHistoryComponent } from './table-history/table-history.component';
   ],
   imports: [CommonModule, MaterialModule, RouterModule, ReactiveFormsModule],
   exports: [
-    HeaderClientsComponent,
+
     MainHomeComponent,
     MainTravelComponent,
     MainStatusComponent,

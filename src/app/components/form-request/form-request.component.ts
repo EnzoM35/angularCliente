@@ -37,7 +37,6 @@ export class FormRequestComponent implements OnInit {
 
   submit(formDirective: FormGroupDirective): void {
     this.reqForm.value.id = localStorage.getItem('id');
-    console.log(this.reqForm.value);
     this.requestService.solicitar(this.reqForm.value).subscribe((resp) => {
       this.openDialog();
     });
@@ -45,7 +44,7 @@ export class FormRequestComponent implements OnInit {
     this.reqForm.reset();
   }
 
-  //Diálogo paraconfirmar
+  //Diálogo para confirmar
   openDialog() {
     this.dialog.open(DialogRequestComponent, {
       width: '350px',

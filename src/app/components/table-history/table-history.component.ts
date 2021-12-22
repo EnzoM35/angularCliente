@@ -45,13 +45,6 @@ export class TableHistoryComponent implements AfterViewInit {
           this.enviosAux.push(this.envios[i]);
         }
       }
-      console.log(this.envios);
-      console.log(
-        'ESTE ES' +
-          this.envios[0].travelEquipmentDTOs[
-            this.envios[0].travelEquipmentDTOs.length - 1
-          ].statusTravel
-      );
       this.dataSource = new MatTableDataSource<Estado>(this.enviosAux);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
@@ -90,14 +83,5 @@ export class TableHistoryComponent implements AfterViewInit {
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
-  }
-
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-
-    if (this.dataSource.paginator) {
-      this.dataSource.paginator.firstPage();
-    }
   }
 }

@@ -38,7 +38,6 @@ export class LoginHomeComponent implements OnInit {
   });
 
   submit(formDirective: FormGroupDirective): void {
-    //LOGIN
     this.user = this.loginForm.value;
     this.loginService.login(this.user.email, this.user.password).subscribe(
       (resp) => {
@@ -62,7 +61,6 @@ export class LoginHomeComponent implements OnInit {
     this.loginForm.reset();
   }
 
-  //redirección a home de clientes
   isHomeRoute() {
     return this.router.navigate(['home']);
   }
